@@ -1,0 +1,47 @@
+Roll-and-Move Adventure - Changes From the Design Document
+Wannida Polchan, CS 583
+
+NEW FEATURES (not in the one-pager)
+- Snake escape: when a player lands on a snake and has at least 1 coin, they can
+  pay 1 coin to escape instead of sliding down (Y / N keys or buttons). This makes
+  coins matter for more than just the Lucky Die.
+- Computer opponent: the title screen now has "1 Player vs Computer" as well as
+  "2 Players". The computer picks dice and decides on snake escapes on its own.
+  This was a stretch goal in the one-pager.
+- Players start with 1 coin, so the Lucky Die and the snake escape can be used
+  from the start of the game.
+- New Life Event cards: "Four-Leaf Clover" (next Lucky Die roll is free),
+  "Birthday Party" (take 1 coin from each player), "Rainy Day" (everyone moves
+  back 2) and "Shortcut" (move forward 3). There are 10 cards in total. The deck
+  is shuffled, so a card does not repeat until all cards have been drawn.
+- How to Play screen on the title screen.
+- Win screen shows stats: ladders climbed, snakes hit, snakes escaped, coins left
+  and total turns.
+- Extra feedback: "Player 1's Turn" banner, floating text (+2 coins, Ouch!, ...),
+  coin shower, sparkles, confetti, camera shake on snakes, and a pawn that bounces
+  on its turn and celebrates when it wins.
+
+CHANGES
+- Player setup screen was replaced by a simple mode choice on the title screen.
+  Players do not type names or pick colors (Player 1 is blue, Player 2 or the
+  Computer is orange). This kept the scope small.
+- No background music. The assignment asks to hear the game sounds clearly, so
+  the game uses sound effects only.
+- Board layout: each column has exactly one ladder or one snake, so they never
+  cross and the board is easy to read. There are 3 ladders, 3 snakes,
+  4 coin tiles and 5 Life Event tiles.
+- If a roll goes past the Finish tile, the pawn stops on Finish and wins.
+- Moves caused by a Life Event card (like "Shortcut") do not trigger the tile the
+  pawn lands on. Only the first tile's effect happens, as planned.
+- The pause menu also has Restart and Main Menu, not just Resume.
+- Extra keys: Y / N for the snake choice, H for How to Play, R and M in the pause menu.
+- Added a character select screen. Players pick their own animal (Kenney Animal Pack), and the computer picks a random one
+
+NOT ADDED
+- The "Swap" face on the Lucky Die (stretch goal). The Lucky Die faces are
+  -2, 0, 3, 5, 8 and 10.
+
+ART AND SOUND
+- Art (tiles, pawns, dice, snakes, ladders, coins, cards, buttons) and all sound
+  effects were generated with the Python scripts in the Tools folder, so they
+  share one style. The font is Fredoka (SIL Open Font License).
